@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-const PostDisplay = (props) => {
+function PostDisplay(props) {
+
     return(
-        <div>
+        <div onDoubleClick={() => props.deletePost(props.post.post_id)}>
             <img src={props.post.image_url} alt='user post' style={{ width: '150px' }} />
         </div>
-    )
-}
+        )
+    }
 
 export default PostDisplay;
